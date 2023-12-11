@@ -17,7 +17,7 @@ export default function Navigation() {
     <Navbar position="static">
       <Avatar></Avatar>
       <NavbarBrand>
-        <p className="font-bold text-inherit">LOGO</p>
+        <Link href="/">LOGO</Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem isActive>
@@ -38,10 +38,10 @@ export default function Navigation() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="/login">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="/cart" variant="flat">
+          <Button as={Link} color="danger" href="/cart" variant="flat">
             Cart
           </Button>
         </NavbarItem>

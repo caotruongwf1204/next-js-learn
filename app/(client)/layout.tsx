@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Navigation from "./components/navigation";
+
 
 export default function ClientLayout({
   children,
@@ -8,16 +10,17 @@ export default function ClientLayout({
   children: React.ReactNode;
 }) {
   return (
-  <>
-  <Header></Header>
+    <>
+      <Header></Header>
 
-  <Navigation></Navigation>
+      <Navigation></Navigation>
 
-  {children}
+      <main className="max-w-6xl mx-auto">
 
-  <Footer></Footer>
+          {children}
+      </main>
 
-</>
-)
-  
+      <Footer></Footer>
+    </>
+  );
 }
